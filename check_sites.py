@@ -7,6 +7,7 @@ import sys
 # Takip edilecek siteler: {"isim": "url"}
 SITES = {
     "hsk_mustemir": "https://www.hsk.gov.tr/Arsiv/mustemir",
+    "hsk_duyurular": "https://www.hsk.gov.tr/Arsiv/duyuru",
 }
 
 STATE_FILE = "state.json"
