@@ -15,7 +15,8 @@ CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
 def send_telegram(msg):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-    requests.post(url, data={"chat_id": CHAT_ID, "text": msg})
+    resp = requests.post(url, data={"chat_id": CHAT_ID, "text": msg})
+    print(f"Telegram cevabı: {resp.status_code} - {resp.text}")
 
 def get_hash(url):
     r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
